@@ -1,6 +1,6 @@
 import tweepy
 from pyowm.owm import OWM
-from datetime import datetime, time, timezone
+from datetime import datetime
 from pytz import timezone
 
 # Twitter API keys
@@ -48,6 +48,10 @@ ss24 = sshms.strftime('%H:%M')
 ss24str = datetime.strptime(ss24, "%H:%M")
 sunset = ss24str.strftime('%I:%M')
 
+# Forming the final tweet
+tweet = "The current temperature in Sacramento is " + str(currenttemp) + "F. The sun is going to rise at " + str(
+    sunrise) + "am and will set at " + str(sunset) + "pm. The high today is " + str(temp_max) + "F and the low is " + str(temp_min) + "F."
+
 # Sends the tweet
 api = tweepy.API(auth)
-api.update_status()
+api.update_status(tweet)
