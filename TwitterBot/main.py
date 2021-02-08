@@ -4,13 +4,13 @@ from datetime import datetime
 from pytz import timezone
 
 # Twitter API keys
-consumer_key = 'GN3KZZirKI1egrEviS0DRf7yL'
-consumer_secret = '0XHG0xR0aObaXtWUlGBovQY7TCjuTdmnivffHKqSYfQEbLuE7d'
-key = '1315679401053282304-NEJLiokINOcAOZqB7mHztGNk4sGhgI'
-secret = 'ybgihG10nIAwxqXfYVZBaqQB8BJSKLi8vbsVIMOUqthRE'
+consumer_key = 'YOUR CONSUMER KEY'
+consumer_secret = 'YOUR CONSUMER SECRET'
+key = 'YOUR KEY'
+secret = 'YOUR SECRET'
 
 # Open Weather Map API keys
-owm = OWM('5f28773b1305282ee6f786650679a41e')
+owm = OWM('YOUR OWM KEY')
 
 # Confirms my API keys
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
