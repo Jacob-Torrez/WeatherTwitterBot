@@ -32,7 +32,7 @@ temp_min = one_call.forecast_daily[0].temperature('fahrenheit').get('min')
 
 # Sunrise time
 srdt = one_call.forecast_daily[0].sunrise_time("date")
-srpst = srdt.astimezone(timezone('America/Los_Angeles'))
+srpst = srdt.astimezone(timezone('COUNTRY/CITY'))
 srstr = srpst.strftime('%Y-%m-%d-%H-%M')
 srt = datetime.strptime(srstr, '%Y-%m-%d-%H-%M')
 srhms = srt.time()
@@ -40,7 +40,7 @@ sunrise = srhms.strftime('%H:%M')
 
 # Sunset time
 ssdt = one_call.forecast_daily[0].sunset_time('date')
-sspst = ssdt.astimezone(timezone('America/Los_Angeles'))
+sspst = ssdt.astimezone(timezone('COUNTRY/CITY'))
 ssstr = sspst.strftime('%Y-%m-%d-%H-%M')
 sst = datetime.strptime(ssstr, '%Y-%m-%d-%H-%M')
 sshms = sst.time()
