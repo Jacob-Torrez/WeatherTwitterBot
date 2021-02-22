@@ -49,7 +49,7 @@ ss24str = datetime.strptime(ss24, "%H:%M")
 sunset = ss24str.strftime('%I:%M')
 
 # Forming the final tweet
-tweet = "The current temperature in Sacramento is " + str(currenttemp) + "F. The sun is going to rise at " + str(
+tweet = "The current temperature in "YOUR LOCATION" is " + str(currenttemp) + "F. The sun is going to rise at " + str(
     sunrise) + "am and will set at " + str(sunset) + "pm. The high today will be " + str(temp_max) + "F and the low will be " + str(temp_min) + "F."
 
 # Sends the tweet
