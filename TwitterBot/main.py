@@ -18,8 +18,8 @@ auth.set_access_token(key, secret)
 mgr = owm.weather_manager()
 
 # Defines the locations
-one_call = mgr.one_call(lat=38.5816, lon=-121.4944)
-weather = mgr.weather_at_place('Sacramento,US').weather
+one_call = mgr.one_call(lat="YOUR LAT", lon="YOUR LONG")
+weather = mgr.weather_at_place('CITY, COUNTRY').weather
 
 # Current temperature
 currenttemp = weather.temperature('fahrenheit').get('temp')
